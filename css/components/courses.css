@@ -1,0 +1,113 @@
+.courses{
+    background: linear-gradient(180deg, #6f7dfb 0%, #26308c 100%);
+    padding:4.4rem 0;
+    padding-bottom: 50px;
+}
+
+.courses .container{
+    min-width: 100%;
+}
+
+.courses__title{
+    margin-bottom: 40px;
+    color: #fff;
+    text-align: center;
+}
+
+.course__card{
+    position: relative;
+    min-height: 360px;
+    padding: 0 2.1rem;
+    border-radius: 1.5rem;
+    background: #fff; 
+    margin-bottom: 50px;
+}
+
+.course__card::after{
+    content:'';
+    position: absolute;
+    bottom: 0;
+    left:1.5rem;
+    right: 1.5rem;
+    height: 8px;
+    border-radius: 1.5rem;
+    background: var(--dark-blue-color);
+}
+
+.course__card img{
+    min-height: 240px;
+    border-radius: 1.5rem;
+    filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.25));
+    object-fit: cover;
+}
+
+.course__card__info{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+h3.course__card__title{
+    font-family: var(--ff-raleway);
+    font-weight: 900;
+    font-size: 1.4rem;
+    line-height: 1.5;
+    color: var(--dark-blue-color);
+}
+
+.course__card__duration{
+    font-family:var(--ff-raleway);
+    font-weight: 900;
+    line-height:1.5;
+    color: var(--dark-blue-color);
+    position: relative;
+    padding-left: 20px;
+    white-space: nowrap;
+}
+
+.course__card__duration::before{
+    content: url(../../images/clock.svg);
+    position: absolute;
+    top: 2px;
+    left: -6px;
+}
+
+.courses__link{
+    display: block;
+    max-width: fit-content;
+    margin: 0 1rem 0 auto;
+}
+
+
+/**************************** media ********************/
+
+
+@media (min-width: 525px){
+    .courses .container{
+        min-width:unset;
+    }
+
+    .course__card::after{
+        height: 10px;
+    }
+
+    .course__card__info{
+        padding: .62rem 0 1.20rem;
+        align-items: center;
+    }
+    
+    h3.course__card__title{
+        font-size:2rem;
+    }
+
+}
+
+
+
+@media (min-width: 1024px){
+    .courses__cards{
+        display: flex;
+        gap: 70px;
+    }
+
+}

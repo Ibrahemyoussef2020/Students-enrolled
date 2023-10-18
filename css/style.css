@@ -1,9 +1,12 @@
 :root {
-    --orange-color: #da722c;
-    --dark-blue-color: #023047;
-    --dark-color: #070917;
-    --light-color: #e8f7fb;
-    --light-blue-color: #6f7dfb;
+
+  --ff-raleway:'Raleway' , sans-serif;
+
+  --orange-color: #da722c;
+  --dark-blue-color: #023047;
+  --dark-color: #070917;
+  --light-color: #e8f7fb;
+  --light-blue-color: #6f7dfb;
 }
 
 *,
@@ -29,20 +32,33 @@ a{
     color: inherit;
 }
 
+h1,h2,h3,h4{
+  margin-block-start:0;
+  margin-block-end:0;
+}
 
+section {
+  margin-top: 100px;
+}
 
+/* for styling */
+img{
+  max-width: 100%;
+}
 /************ components ***********/
 
 .container {
     max-width: 1134px;
-    margin: 0 auto;
+    margin-left:auto;
+    margin-right:auto;
+    width: 330px;
 }
 
 
 /* Buttons */
 
 .btn {
-    padding:1rem 2rem;
+    padding:.75rem 2.1rem;
     border-radius:1.4rem;
     color: #fff;
     display: inline-block;
@@ -59,19 +75,50 @@ a{
   .btn.light {
     background: var(--orange-color);
   }
+
+  .hero__inrol {
+    padding-left:2.5rem;
+    text-align: start;
+  }
+
   
-  .btn.enrol-icon::before {
-    content: url("images/enrol-now-icon.svg");
+  .hero__inrol::before {
+    content: url("../images/enrol-now-icon.svg");
     position: absolute;
     top: 50%;
-    left: 32px;
+    left:1rem;
     transform: translateY(-50%);
   }
   
-  .btn.enrol-icon {
-    padding-left: 60px;
+  @media (min-width:540px){
+    .container{
+      width:500px;
+    }
   }
 
-  
+  @media (min-width:767px){
+    .container{
+      width:700px;
+    }
+  }
+
+
+  @media (min-width:1024px){
+    .container{
+      width:990px;
+    }
+  }
+
 
   
+
+  @media (min-width:1400px){
+    html{
+      font-size: 18px;
+    }
+
+    .container{
+      max-width: unset;
+      width:1200px;
+    }
+  }

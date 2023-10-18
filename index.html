@@ -12,41 +12,47 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/components/header.css" />
+    <link rel="stylesheet" href="./css/components/aside.css" />
+    <link rel="stylesheet" href="./css/components/testimonials.css" />
+    <link rel="stylesheet" href="./css/components/courses.css" />
+    <link rel="stylesheet" href="./css/components/app.css" />
+    <link rel="stylesheet" href="./css/components/footer.css" />
   </head>
   <body>
 
-    <section class="hero">
-        <header>
+    <header>
+      <div class="container">
+          
+          <nav>
             <div class="container">
-                <nav>
-                    <div>GD.</div>
+              <span class="logo">GD.</span>
 
-                    <div class="menu-icon">
-                        <img src="images/menu-icon.svg" alt="">
-                    </div>
+              <div class="menu__icon">
+                  <img src="images/menu-icon.svg" alt="##">
+              </div>
 
-                    <ul class="menu__list">
-                        <li>
-                        <a href="#">About</a>
-                        </li>
-            
-                        <li>
-                        <a href="#">Services</a>
-                        </li>
-            
-                        <li>
-                        <a href="#">Our Work</a>
-                        </li>
-            
-                        <li>
-                        <a href="#" class="btn dark">Enrol Now</a>
-                        </li>
-                    </ul>
-                </nav>
+              <ul class="menu__list">
+                  <li>
+                  <a href="#">About</a>
+                  </li>
+      
+                  <li>
+                  <a href="#">Services</a>
+                  </li>
+      
+                  <li>
+                  <a href="#">Our Work</a>
+                  </li>
+      
+                  <li>
+                    <a href="#" class="btn dark">Enrol Now</a>
+                  </li>
+              </ul>
             </div>
-        </header>
+          </nav>
 
-        <div class="hero__intro">
+          <div class="hero">
             <div class="hero__left">
                 <h1 class="hero__title">
                     Learn the art of <br />
@@ -57,43 +63,38 @@
                     everything from generating an idea to publishing your games to
                     different platforms.
                 </p>
-    
                 <a href="#" class="hero__inrol btn light">
                     Enrol Now
                 </a>
+            </div>
     
+            <div class="achievement-cards">
+                  <article class="achievement-card students-enrolled">
+                    <div class="rating">
+                      <div class="rating__desc">
+                        <span>32K</span>
+                      </div>
+                      <h3 class="rating__title">Students Enrolled</h3>
+                    </div>
+                  </article>
+      
+                  <article class="achievement-card overall-rating">
+                    <div class="rating">
+                      <div class="rating__desc">
+                        <span>4.7</span>
+                        <img src="images/start-icon.svg" alt="Rating" />
+                      </div>
+                      <h3 class="rating__title">Overall Rating</h3>
+                    </div>
+                  </article>
             </div>
 
-            <div class="achievement-cards">
-                <article class="achievement-card students-enrolled">
-                  <div class="content">
-                    <div>
-                      <h3>32K</h3>
-                    </div>
-                    <p>Students Enrolled</p>
-                  </div>
-    
-                  <div class="bg"></div>
-                </article>
-    
-                <article class="achievement-card overall-rating">
-                  <div class="content">
-                    <div>
-                      <h3>4.7</h3>
-                      <img src="images/start-icon.svg" alt="Rating" />
-                    </div>
-                    <p>Overall Rating</p>
-                  </div>
-    
-                  <div class="bg"></div>
-                </article>
-    
             <div class="hero__right">
                 <img src="./images/hero-image.png" alt="hero">
             </div>
         </div>
-
-    </section>
+      </div>
+  </header>
 
     <aside class="menu__aside aside">
         <div class="aside__close">
