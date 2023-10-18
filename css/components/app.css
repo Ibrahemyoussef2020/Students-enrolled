@@ -1,0 +1,27 @@
+.app{
+    text-align: center;
+}
+
+
+
+.app__btns{
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.app__btn{
+    width: 310px;
+    padding: 1rem 2rem;
+    font-size: 1.20rem;
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+    outline: none;
+    border: none;
+    color: #fff;
+    background: #000;
+}
