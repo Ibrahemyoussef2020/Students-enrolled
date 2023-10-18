@@ -22,14 +22,14 @@ body {
 
 /********** Rsest ***************/
 
-p {
-    margin-block-start:0;
-    margin-block-end:0;
-}
-
 a{
     text-decoration: none;
     color: inherit;
+}
+
+
+h3:not(.reset-format) , .sub-title{
+  font-size:1.5rem;
 }
 
 h1,h2,h3,h4{
@@ -37,9 +37,12 @@ h1,h2,h3,h4{
   margin-block-end:0;
 }
 
-section {
-  margin-top: 100px;
+p{
+  margin-block-start:0;
+  margin-block-end:0;
 }
+
+
 
 /* for styling */
 img{
@@ -54,18 +57,48 @@ img{
     width: 330px;
 }
 
+section,footer {
+  margin-top: 70px;
+}
+
+@media (min-width:1200px){
+  section,footer ,footer{
+    margin-top: 100px;
+  }
+}
+
+h2{
+  font-family: var(--ff-raleway);
+  font-weight: 900;
+  font-size:1.9rem;
+  line-height: 1.2;
+  color:var(--dark-blue-color);
+}
+
+section p {
+  line-height:2;
+  color: var(--dark-blue-color);
+  margin: .73rem 0;
+}
+
 
 /* Buttons */
 
 .btn {
     padding:.75rem 2.1rem;
-    border-radius:1.4rem;
+    border-radius:1.5rem;
     color: #fff;
     display: inline-block;
     font-weight: bold;
     font-size:1rem;
     text-decoration: none;
     position: relative;
+  }
+
+  @media (min-width:1024px){
+    .btn{
+      padding:1rem 2.1rem;
+    }
   }
   
   .btn.dark {
@@ -77,7 +110,8 @@ img{
   }
 
   .hero__inrol {
-    padding-left:2.5rem;
+    padding-left: 4rem;
+    margin-top: 1rem;
     text-align: start;
   }
 
@@ -85,8 +119,8 @@ img{
   .hero__inrol::before {
     content: url("../images/enrol-now-icon.svg");
     position: absolute;
-    top: 50%;
-    left:1rem;
+    top: 55%;
+    left: 2.5rem;
     transform: translateY(-50%);
   }
   
@@ -107,8 +141,23 @@ img{
     .container{
       width:990px;
     }
+
+    h2{
+      font-size:3.72rem;
+    }
+    
+    h3:not(.reset-format) , .sub-title{
+      font-size:2.1rem;
+    }
   }
 
+
+  
+  @media (min-width:1200px){
+    .container{
+      width:1100px;
+    }
+  }
 
   
 
