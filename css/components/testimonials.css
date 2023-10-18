@@ -147,4 +147,12 @@
         align-items: center;
         gap: 6.25rem;
     }
+
+    .sm-btn{
+        display: none;
+    }
+
+    .lg-btn{
+        display: inline-block;
+    }
 }
