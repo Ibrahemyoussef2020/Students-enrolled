@@ -1,0 +1,252 @@
+header{
+    background: linear-gradient(180deg,#6f7dfb 0% , #2630bc 100%);
+    height: 100vh;
+    min-height: 740px;
+    max-height:790px;
+    overflow: hidden;
+}
+
+header .container{
+    background: linear-gradient(180deg,#6f7dfb 0% , #2630bc 100%);
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left:0;
+    min-height: 70px;
+    width:100%;
+    color: #fff;
+    background: #6674f3;
+    z-index:10;
+    padding-top: 2.1rem;
+    padding-bottom:2.1rem;
+}
+  
+
+nav .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: inherit;
+}
+
+.menu__icon{
+    display: inline-block;
+}
+
+.logo {
+    font-family:var(--ff-raleway);
+    font-weight: 900;
+    font-size: 40px;
+    color: #ffffff;
+}
+
+.menu__list{
+    display: none;
+    align-items: center;
+    gap: 60px;
+    list-style: none;
+    margin: 0;
+  }
+  
+  .menu__list a {
+    font-weight: bold;
+    font-size: 16px;
+    color: #fff;
+  }
+
+
+  /********  hero ************/
+  
+.hero{
+    position: relative;
+    height: 100vh;
+    min-height: 740px;
+    max-height: 790px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background: inherit;
+}
+
+/* left */
+
+.hero__left{
+    flex: 1;
+    width: 100%;
+    color: #fff;
+}
+
+.hero__title {
+    margin-top: 7.5rem;
+    font-family:var(--ff-raleway);
+    font-weight: 900;
+    /*font-size:3.14rem;*/
+    font-size: 2.25rem;
+    line-height:1.4;
+    max-width: 460px;
+} 
+
+
+.hero__desc{
+    line-height: 2;
+    margin-bottom: 1.8rem;
+    max-width: 460px;
+}
+
+/* right */
+
+.hero__right{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    align-items: flex-end;
+    z-index: 1;
+}
+
+.hero__right img{
+    height:400px;
+    transform: translateX(50px );
+}
+
+/* achievement */
+
+.achievement-cards{
+    position: absolute;
+    bottom: 150px;
+    left: -1.5rem;
+    z-index: 2;
+}
+
+.achievement-card {
+    position: absolute;
+    min-width: 210px;
+    color: var(--dark-blue-color);
+    background: #fff;
+    border-radius:1.5rem;
+}
+
+.achievement-card::before{
+    content: '';
+    position: absolute;
+    top:.5rem;
+    left:.5rem;
+    height: 100%;
+    width: 100%;
+    border-radius:1.5rem;
+    background: linear-gradient(180deg, #6f7dfb 0%, #3b448f 100%);
+    z-index:0;
+
+}
+  
+.achievement-card .rating {
+    position: relative;
+    border-radius:1.5rem;
+    padding: 0.5rem 2.1rem;
+    background: #fff;
+    z-index: 10;
+    color: var(--dark-blue-color);
+    text-align: center;
+    z-index: 1;
+}
+
+
+.students-enrolled {
+    left:50px;
+   /* top:0; */
+   top:20px;
+}
+
+.overall-rating {
+    left:20px;
+    bottom:20px;
+}
+
+.achievement-card  .rating__title{
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.achievement-card  .rating__desc{
+    font-size:2.25rem;
+    font-weight: bold;
+}
+
+/************* media ************/
+
+@media (min-width:400px){
+
+    .hero__right{
+        justify-content: flex-end;
+    }
+}
+
+@media (min-width:500px){
+
+    header , .hero {
+        min-height: 700px;
+        max-height: 700px;
+    }
+    
+    .students-enrolled {
+        left: 20px;
+    }
+}
+
+@media (min-width:767px){
+
+    .menu__list{
+        display: flex;
+    }
+
+    .menu__icon{
+        display:none;
+    }
+
+    .hero{
+        align-items: center;
+        flex-wrap: nowrap;
+    }
+
+    .hero__left{
+        min-width:500px;
+    }
+
+    .achievement-cards {
+        bottom: 134px;
+        left: 50%;
+    }
+
+
+    .hero__right{
+        position: relative;
+    }
+
+    .hero__right img{
+        height:500px;
+        margin-left: 0;
+    }
+}
+
+@media (min-width:1024px){
+    
+    .achievement-cards{
+        bottom: 300px;
+        left: 45%;
+    }
+    
+    .hero__right img{
+        height:550px;
+    }
+
+}
+
+
+
+@media (min-width:1400px){
+    .achievement-card{
+        min-width: 270px;
+    }
+}
