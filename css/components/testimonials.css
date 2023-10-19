@@ -105,25 +105,32 @@
 /* min */
 
 @media(min-width:525px){
-    .jacob{
-        margin-left: 32px;
+
+    .testimonial-card{
+        min-width: 442px;
+        width:calc(90% - 35px);
     }
     
     .testimonial-card img{
         top: -35px;
+    }
+    
+    .jacob{
+        margin-left: 32px;
     }
 
     .jacob::before{
         left: 38px;
         z-index: -1;
     }
+
+
 }
 
 @media (min-width:767px){
 
-    .testimonial-card{
-        min-width: 442px;
-        max-width: 600px;
+    .sm-btn{
+        margin: 0 4rem 0 auto;
     }
 
     .testimonial-card__desc{

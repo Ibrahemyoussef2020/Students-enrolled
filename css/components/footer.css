@@ -1,0 +1,149 @@
+footer{
+    padding: 70px 0;
+    background: var(--dark-color);
+    color: #fff;
+}
+
+footer h3{
+    color: var(--orange-color);
+}
+
+footer ul{
+    padding-left: 1.2rem;
+}
+
+footer li{
+    margin: 1rem 0;
+}
+
+footer .social{
+    margin-left: 1.2rem;
+    display: flex;
+    gap: 1rem;
+}
+
+footer .social img{
+    min-width: 27px;
+    min-height: 27px;
+}
+
+footer form{
+    position: relative;
+    max-width: 400px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+
+
+footer input{
+    font-size:1rem;
+    line-height:2;
+    border-radius:.5rem;
+    padding: .5rem 160px .5rem 2.1rem;
+    border: none;
+    width: 100%;
+    color: #000;
+}
+
+.submit-btn{
+    right: 5px;
+    top: 50%;
+    margin-top: 2rem;
+    transform: translateY(-50%);
+    background: var(--dark-blue-color);
+    border-radius: 8px;
+    padding: 8px 32px;
+    border: 0;
+    font-family: "Poppins", sans-serif;
+    font-weight: normal;
+    font-size: 16px;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.copyright{
+    margin-top: 2rem;
+    color:#00e2ff;
+    opacity: .8;
+}
+
+
+/************ media ***********/
+
+/* max */
+
+@media (max-width: 766px){
+
+    footer input {
+        margin-bottom: 1rem;
+        padding: .5rem 2.1rem;
+    }
+
+    footer{
+        text-align: center;
+    }
+
+    footer .links{
+        margin-bottom: 3rem;
+    }
+
+    footer .social{
+        justify-content: center;
+    }
+
+    footer form{
+        margin: 1rem auto 1.5rem;
+    }
+
+    .submit-btn{
+        width: 50%;
+        min-width:160px;
+    }
+}
+
+
+
+
+/* min */
+
+@media (min-width: 767px){
+    .links-container{
+        display: grid;
+        grid-template-columns: 2fr 2fr;
+    }
+
+    .links:last-child{
+        grid-column: 1 / -1;
+    }
+
+    footer form{
+        max-width: unset;
+    }
+
+    footer form .submit-btn {
+        position: absolute;
+        margin-top: unset;
+    }
+
+}
+
+
+@media (min-width:992px){
+    
+
+}
+
+@media (min-width: 1024px){
+    footer form{
+        margin-bottom: 2rem;
+    }
+
+    .links-container{
+        grid-template-columns: 2fr 2fr 3fr;
+    }
+
+    .links:last-child{
+        grid-column:unset;
+    }
+}

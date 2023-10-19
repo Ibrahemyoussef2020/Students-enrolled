@@ -14,15 +14,23 @@ nav {
     position: fixed;
     top: 0;
     left:0;
-    min-height: 70px;
+    min-height:60px;
     width:100%;
-    color: #fff;
-    background: #6674f3;
-    z-index:10;
     padding-top: 2.1rem;
     padding-bottom:2.1rem;
+    color: #fff;
+    z-index:10;
+    transition:all .5s ease;
 }
-  
+
+nav.scrolled {
+    top: 0;
+    padding: 12px;
+    box-shadow: 0 1rem  .75rem -.5rem rgba(0, 0, 0, 0.3);
+    border-radius: 0 0 .5rem .5rem;
+    background-color: var(--light-blue-color);
+}
+ 
 
 nav .container{
     display: flex;
@@ -30,6 +38,7 @@ nav .container{
     align-items: center;
     background: inherit;
 }
+
 
 .menu__icon{
     display: inline-block;
@@ -82,7 +91,6 @@ nav .container{
     margin-top: 7.5rem;
     font-family:var(--ff-raleway);
     font-weight: 900;
-    /*font-size:3.14rem;*/
     font-size: 2.25rem;
     line-height:1.4;
     max-width: 460px;
@@ -157,12 +165,12 @@ nav .container{
 .students-enrolled {
     left:50px;
    /* top:0; */
-   top:20px;
+   top:-100px;
 }
 
 .overall-rating {
     left:20px;
-    bottom:20px;
+    top: 25px;
 }
 
 .achievement-card  .rating__title{
@@ -182,21 +190,50 @@ nav .container{
     .hero__right{
         justify-content: flex-end;
     }
-}
 
-@media (min-width:500px){
-
-    header , .hero {
-        min-height: 700px;
-        max-height: 700px;
+    .hero__right img{
+        height: 420px;
+        transform: translateX(0);
     }
-    
+
     .students-enrolled {
         left: 20px;
+        top: -140px;
     }
+
+    .overall-rating {
+        top:0;
+    }
+}
+
+@media (min-width:570px){
+
+    header , .hero {
+        min-height: 750px;
+        max-height: 800px;
+    }
+
+    .hero__title{
+        font-size:3.14rem;
+    }
+
+    .students-enrolled {
+        top: -120px;
+    }
+
+   
 }
 
 @media (min-width:767px){
+
+    header , .hero {
+        min-height: 800px;
+        max-height: 850px;
+    }
+
+    nav.scrolled{
+        background: var(--dark-color);
+    }
 
     .menu__list{
         display: flex;
@@ -207,7 +244,6 @@ nav .container{
     }
 
     .hero{
-        align-items: center;
         flex-wrap: nowrap;
     }
 
@@ -215,23 +251,49 @@ nav .container{
         min-width:500px;
     }
 
-    .achievement-cards {
-        bottom: 134px;
-        left: 50%;
+    .students-enrolled {
+        top: -170px;
+    }
+
+    .overall-rating {
+
+        top: -30px;
     }
 
 
     .hero__right{
-        position: relative;
+        position: absolute;
+        top:0px;
     }
 
     .hero__right img{
-        height:550px;
+        height:500px;
         margin-left: 0;
     }
 }
 
+@media (min-width:992px){
+    .overall-rating {
+        top:0;
+        left: 50px;
+    }
+
+    .students-enrolled {
+        top: -150px;
+        left: 50px;
+    }
+
+    .hero__right img {
+        height: 580px;
+       transform: translateX(20px);
+    }
+}
+
 @media (min-width:1024px){
+
+    .hero{
+        align-items: center;
+    }
 
     .hero__title{
         font-size: 3.14rem;
@@ -243,7 +305,7 @@ nav .container{
     }
     
     .hero__right img{
-        height:550px;
+        height:600px;
     }
 
 }
